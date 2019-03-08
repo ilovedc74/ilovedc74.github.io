@@ -13,6 +13,10 @@
 	<script src="https://mil.psy.ntu.edu.tw/~whitney/jquery.bxslider/jquery.bxslider.js"></script>
 	<!-- bxSlider CSS file -->
 	<link href="https://mil.psy.ntu.edu.tw/~whitney/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
+	<!-- Added uikit -->
+	<link rel="stylesheet" href="css/uikit.min.css" />
+	<script src="js/uikit.min.js"></script>
+	<script src="js/uikit-icons.min.js"></script>
 
 	<style>
 		body,h1,h2,h3,h4,h5,h6 {
@@ -121,17 +125,20 @@
           <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" 
             onclick="toggleFunction()" title="Toggle Navigation Menu">
 			<i class="fa fa-bars"></i>
-		  </a>
-		  <a href="#home" class="w3-bar-item w3-button">HOME</a>
-		  <a href="#about" class="w3-bar-item w3-button w3-hide-smallß"> ABOUT</a>
-		  <a href="#personalhistory" class="w3-bar-item w3-button w3-hide-small"> PERSONAL HISTORY</a>
-		  <a href="#researchproject" class="w3-bar-item w3-button w3-hide-small"> RESEARCH PROJECT</a>
-		  <a href="#contact" class="w3-bar-item w3-button w3-hide-small"> CONTACT</a>
-		  <a href="https://www.linkedin.com/in/whitneyhung/" target="_blank" class="w3-bar-item w3-button">LINKEDIN</a>
-			<a href="https://github.com/ilovedc74/" target="_blank" class="w3-bar-item w3-button">GITHUB</a> 
+			</a>
+			<ul class="uk-navbar-nav" data-uk-scrollspy-nav="{closest: 'li', smoothscroll:true}">
+				
+		  	<a href="#home" class="w3-bar-item w3-button">HOME</a>
+		  	<a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
+		  	<a href="#personalhistory" class="w3-bar-item w3-button w3-hide-small"> PERSONAL HISTORY</a>
+		  	<a href="#researchproject" class="w3-bar-item w3-button w3-hide-small"> RESEARCH PROJECT</a>
+		  	<a href="#contact" class="w3-bar-item w3-button w3-hide-small">CONTACT</a>
+		  	<a href="https://www.linkedin.com/in/whitneyhung/" target="_blank" class="w3-bar-item w3-button">LINKEDIN</a>
+				<a href="https://github.com/ilovedc74/" target="_blank" class="w3-bar-item w3-button">GITHUB</a>
 			<!-- <a href="https://www.linkedin.com/in/whitneyhung/" target="_blank" class="w3-bar-item w3-button" img src="https://mil.psy.ntu.edu.tw/~whitney/pic/In-White-21px-R.png"></a> -->
 		  <!-- <a href="https://github.com/ilovedc74/" target="_blank" class="w3-bar-item w3-button" img src="GitHub-Mark-Light-32px.png">GITHUB</a> -->
-			<a href="https://ilovedc74.github.io/cv/whitney_hung_cv_full_v2.pdf" target="_blank" class="w3-bar-item w3-button">CV</a>
+				<a href="https://ilovedc74.github.io/cv/whitney_hung_cv_full_v2.pdf" target="_blank" class="w3-bar-item w3-button">CV</a>
+		</ul>
 		</div>
 		<!-- Navbar on small screens -->
 		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
