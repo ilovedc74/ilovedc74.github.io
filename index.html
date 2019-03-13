@@ -27,6 +27,8 @@
 	<link rel="stylesheet" href="css/uikit.min.css" />
 	<script src="js/uikit.min.js"></script>
 	<script src="js/uikit-icons.min.js"></script>
+	<script type="text/javascript" src="js/uikit-2.27.5/js/components/parallax.min.js"></script>
+	<script type="text/javascript" src="js/uikit-2.27.5/js/components/lightbox.min.js"></script>
 
 	<style>
 		body,h4,h5,h6 {
@@ -222,10 +224,11 @@
 		</div>
 	</div>
 	
-	<!-- Second Parallax Image with Portfolio Text -->
+
+
 	<div class="bgimg-2 w3-display-container w3-opacity-min">
 	  <div class="w3-display-middle">
-	    <span class="w3-xxlarge w3-text-white w3-wide w3-display-center">PERSONAL HISTORY</span>
+	    <span class="w3-xxlarge w3-text-white w3-wide w3-display-center" >PERSONAL HISTORY</span>
 	  </div>
 	</div>
 
@@ -329,9 +332,13 @@
 				</p>
 		<p>We conducted meta-regression on 59 studies.</p>
 	<div class="w3-row">
-		<div class="w3-col m6 w3-padding-large">
-			<img src="https://mil.psy.ntu.edu.tw/~whitney/pic/Rplot_ep.png" onclick="onClick(this)" width="425" height="500" class="w3-center">
-		</div>
+		<figure class="w3-col m6 w3-padding-large">
+				<a href="https://mil.psy.ntu.edu.tw/~whitney/pic/Rplot_ep.png" data-uk-lightbox title="meta-regression">
+					<img src="https://mil.psy.ntu.edu.tw/~whitney/pic/Rplot_ep.png">
+				</a>
+				<figcaption class="uk-text-center uk-text-small">Meta-regression</figcaption>
+			<!-- <img src="https://mil.psy.ntu.edu.tw/~whitney/pic/Rplot_ep.png" onclick="onClick(this)" width="425" height="500" class="w3-center"> -->
+		</figure>
 		<div class="w3-col m6 w3-padding-large text-left">
 				<p>
 					<p>Overall results show the Practice Effect is negatively correlated to the Suppression Effect when the 
