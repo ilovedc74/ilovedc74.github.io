@@ -174,7 +174,11 @@
 		<div class="bgimg-1 w3-display-container w3-opacity-min w3-padding-large w3-xxlarge" id="home">
 		  <div class="w3-display-middle" style="white-space:nowrap;">
 			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hej, <span class="element"></span></span>
-		  </div>
+			</div>
+
+			<div id="arrow" class="w3-center">
+				<a href="#About"><i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i></a>
+			</div>
 		</div>
 	</div>
 	<div class="w3-content w3-container w3-padding-64" id="about">
@@ -228,15 +232,58 @@
 	<!-- Container (Portfolio Section) -->
 	<div class="w3-content w3-container w3-padding-64" id="personalhistory">
 		<h3 class="w3-center">WORK</h3>
-		<div class ="uk-grid" data-uk-grid-match>
+		<!-- <div class ="uk-grid" data-uk-grid-match>
 			<div class="uk-width-1-2" ><a href="https://ilovedc74.github.io/pic/bbplot1.png" data-uk-lightbox title="data source:Book Association"><img src="https://ilovedc74.github.io/pic/bbplot1.png"></a>
 			</div>
 			<div class="uk-width-1-2" ><a href="https://ilovedc74.github.io/pic/newyear2018_mil.png" data-uk-lightbox title="2018 New year card design"><img src="https://ilovedc74.github.io/pic/newyear2018_mil.png"></a>
 			</div>
 			<div class="uk-width-1-2" ><a href="https://www.youtube.com/watch?v=3TosNJKo_wI" data-uk-lightbox title="2019 pop-up exhibition"><img src="https://ilovedc74.github.io/pic/projectionmapping.png"></a>
-			</div>
-		</div>
-	</div>
+			</div> -->
+			  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  	<div class="w3-row-padding w3-center">
+  	  <div class="w3-col s4">
+  	    <img src="https://ilovedc74.github.io/pic/bbplot1.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="data source:Book Association. Created with bbplot.">Independent Bookshops decline
+  	  </div>
+
+  	  <div class="w3-col s4">
+  	    <img src="https://ilovedc74.github.io/pic/newyear2018_mil.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="2018 New year card design. Created with Adobe Illustrator">Lunar new year card
+  	  </div>
+
+  	  <div class="w3-col s4">
+  	    <img src="https://ilovedc74.github.io/pic/projectionmapping.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="2019 pop-up exhibition. Created with openFrameworks.">Projection mapping
+  	  </div>
+
+  	</div>
+
+  	<!-- <div class="w3-row-padding w3-center w3-section">
+  	  <div class="w3-col m3">
+  	    <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+  	  </div>
+
+  	  <div class="w3-col m3">
+  	    <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+  	  </div>
+
+  	  <div class="w3-col m3">
+  	    <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+  	  </div>
+
+  	  <div class="w3-col m3">
+  	    <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+  	  </div>
+  	  <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  	</div> -->
+</div>
+
+	
+	<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
 	<!-- <div class="w3-content w3-container w3-padding-64" id="personalhistory">
 	  <h3 class="w3-center">CONFERENCE PUBLICATION</h3>
 	  	<p><b>Hung, W.</b>, Ng, K.T., & Huang, T.-R. (2018) Retrieval­Induced Forgetting in Social Contexts: A Meta­Analysis. The 30th Association for Psychological Science (APS) Convention. San Francisco, USA.</p>
@@ -417,6 +464,14 @@
 </body>
 
 <script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
 document.addEventListener("DOMContentLoaded", function(){
 	Typed.new(".element", {
