@@ -129,6 +129,11 @@
 			100% { opacity:1; }
 		}
 
+	
+html {
+  scroll-behavior: smooth;
+}
+
 	</style>
 
 </head>
@@ -140,7 +145,7 @@
             onclick="toggleFunction()" title="Toggle Navigation Menu">
 			<i class="fa fa-bars"></i>
 			</a>
-			<ul class="uk-navbar-nav" data-uk-scrollspy-nav="{closest: 'li', smoothscroll:true}">
+			<ul class="uk-navbar-nav">
 				
 		  	<a href="#home" class="w3-bar-item w3-button">HOME</a>
 		  	<a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
@@ -175,10 +180,10 @@
 		  <div class="w3-display-middle" style="white-space:nowrap;">
 			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hej, <span class="element"></span></span>
 			</div>
-
-			<div id="arrow" class="w3-center">
-				<a href="#About"><i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i></a>
-			</div>
+			<a href="#about">
+				<div class="scroll-down" aria-hidden="true" >
+				</div>
+			</a>
 		</div>
 	</div>
 	<div class="w3-content w3-container w3-padding-64" id="about">
