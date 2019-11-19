@@ -1,4 +1,3 @@
- 
 let store = {} 
 function loadData() {
     return Promise.all([
