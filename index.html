@@ -29,9 +29,9 @@
 	<!-- Added uikit -->
 	<link rel="stylesheet" href="https://ilovedc74.github.io/css/uikit.min.css" />
 	<script src="https://ilovedc74.github.io/js/uikit.min.js"></script>
-	<script src="https://ilovedc74.github.io/js/uikit-icons.min.js"></script>
-	<script type="text/javascript" src="https://ilovedc74.github.io/js/uikit-2.27.5/js/components/parallax.min.js"></script>
-	<script type="text/javascript" src="https://ilovedc74.github.io/js/uikit-2.27.5/js/components/lightbox.min.js"></script>
+	<script src="https://ilovedc74.github.io/js/uikit.js"></script>
+	<script type="text/javascript" src="https://ilovedc74.github.io/js/components/parallax.min.js"></script>
+	<script type="text/javascript" src="https://ilovedc74.github.io/js/components/lightbox.min.js"></script>
 
 	<style>
 		body,h4,h5,h6 {
@@ -139,11 +139,36 @@
 			50% { opacity:0; }
 			100% { opacity:1; }
 		}
+/* 
+		#d3:hover + #d3_ {
+			display: block;
+		} */
+		.hidden>img {
+			display:none;
+		}
+		.visible>img {
+			display:block;
+		}
 
 	
-html {
-  scroll-behavior: smooth;
-}
+		html {
+		  scroll-behavior: smooth;
+		}
+		ul {
+    		list-style-type: none;
+		}
+		/* li a {
+			float: left;
+			display: inline;
+		} */
+		li {
+  			float: left;
+		}
+
+		li a {
+		  display: block;
+		  padding: 8px;
+		}
 
 	</style>
 
@@ -254,11 +279,17 @@ html {
 	<!-- Container (Portfolio Section) -->
 	<div class="w3-content w3-container w3-padding-64">
 			<p class="w3-center"><em>These are some side projects. </em></p>
-			<ul>
-				<li><element onclick="showWork()">D3.js</li></button>
-				<li>R ggplot/bbplot</li>
-				<li>Graphic design</li>
-				<li>Projection mapping</li>
+			<ul id = "filters">
+				<li><a id="d3">D3</a>
+				</li> 
+				<li><a id="ggplot">R ggplot/bbplot</a>
+				</li>
+				<li><a id="graphic">Graphic design</a>
+				</li>
+				<li><a id="projmapping">Projection mapping</a>
+				</li>
+				<li><a id="allshow">All</a>
+				</li>
 			</ul>
 		<!-- <p class="w3-center">Click to enlarge.</p> -->
 		<!-- <div class ="uk-grid" data-uk-grid-match>
@@ -270,28 +301,28 @@ html {
 			</div> -->
 			  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   	<div class="w3-row-padding w3-center">
-  	  	<div class="w3-col s4 ggplot">
+  	  	<div class="w3-col s4 img_container ggplot visible">
 				<img src="https://ilovedc74.github.io/pic/bbplot1.png" style="width:100%" 
 				onclick="onClick(this)" class="w3-hover-opacity" alt="Data source: Written evidence submitted by the Booksellers Association. 
 				Created with bbplot.">
-				<figcaption class="uk-text-center uk-text-small">The decline of independent bookshops in UK</figcaption>
+				<!-- <figcaption class="uk-text-center uk-text">The decline of independent bookshops in UK</figcaption> -->
 		</div>
-		<div class="w3-col s4 ggplot">
+		<div class="w3-col s4 img_container visible ggplot">
 				<img src="https://ilovedc74.github.io/pic/simplestack_digitbookvsprint.png" style="width:100%" 
 				onclick="onClick(this)" class="w3-hover-opacity" alt="Decline of print books and 
 				raise of digital platforms. Data source: Mintel Academic, http://academic.mintel.com. Created with bbplot.">
-				<figcaption class="uk-text-center uk-text-small">
-						Decline of print books and 
-						raise of digital media in UK</figcaption>	
+				<!-- <figcaption class="uk-text-center uk-text">Decline of print books and raise of digital media in UK</figcaption>	 -->
 
 	
   	  	</div>
 
-  	  <div class="w3-col s4 projmapping">
-				<img src="https://ilovedc74.github.io/pic/projectionmapping.png" style="width:100%" 
+		<div class="w3-col s4 img_container projmapping">
+				<iframe width="300" height="200" src="https://www.youtube-nocookie.com/embed/3TosNJKo_wI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!-- <img src="https://ilovedc74.github.io/pic/projectionmapping.png" style="width:100%" 
 				onclick="onClick(this)" class="w3-hover-opacity" alt="2019 pop-up exhibition. 
-				Created with openFrameworks. Pop-up video: https://www.youtube.com/watch?v=3TosNJKo_wI">
-				<figcaption class="uk-text-center uk-text-small">Projection mapping</figcaption>
+				Created with openFrameworks."> -->
+				<!-- <figcaption class="uk-text-center uk-text">Projection mapping</figcaption> -->
+				
   	  </div>
 
   	</div>
@@ -320,38 +351,41 @@ html {
 
 
 	<div class="w3-row-padding w3-center w3-section">
-  	  <div class="w3-col s4 graphic">
+  	  <div class="w3-col s4 img_container graphic visible">
 				<img src="https://ilovedc74.github.io/pic/newyear2018_mil.png" style="width:100%" 
 				onclick="onClick(this)" class="w3-hover-opacity" alt="2018 New year card design. 
-				Created with Adobe Illustrator."><figcaption class="uk-text-center uk-text-small">
-					Lunar new year card</figcaption>
+				Created with Adobe Illustrator.">
+				<!-- <figcaption class="uk-text-center uk-text">Lunar new year card</figcaption> -->
   	  </div>
-	  <div class="w3-col s4 ggplot">
+	  <div class="w3-col s4 img_container visible ggplot">
 				<img src="https://ilovedc74.github.io/pic/F5_S4ER_corr.png" style="width:100%" 
 				onclick="onClick(this)" class="w3-hover-opacity" 
 				alt="Lab report - Examining the Relationship between Goldsmiths Musical 
 				Sophistication Index (Gold-MSI) v1.0 and Short Test of Music Preferences (STOMP):
 				Is Gold-MSI Music Genre Neutral? Created with R(ggplot2).">
-				<figcaption class="uk-text-center uk-text-small">Lab report</figcaption>
+				<!-- <figcaption class="uk-text-center uk-text">Lab report</figcaption> -->
 	  </div>
-	  <div class="w3-col s4 graphic">
+	  <div class="w3-col s4 img_container graphic visible">
+		  <!-- <div class = "graphic"> -->
 			<img src="https://ilovedc74.github.io/pic/neon-7.png" style="width:100%" 
-			onclick="onClick(this)" class="w3-hover-opacity" alt="Taiwanese Community newcomers event banner design. 
-			Created with Adobe Illustrator."><figcaption class="uk-text-center uk-text-small">
-				Eventbrite banner</figcaption>		  
+			onclick="onClick(this)" class="w3-hover-opacity" alt="Taiwanese Community newcomers event banner design. Created with Adobe Illustrator.">
+			<!-- <figcaption class="uk-text-center uk-text">Eventbrite banner</figcaption> -->
+		  <!-- </div>		   -->
   	  </div>
-	</div>
-		<!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
-	<div class="w3-row-padding w3-center w3-section">
-		<div class="w3-col s4 d3">
-				<a href="/airlineroute.html"><img src="https://ilovedc74.github.io/pic/airlinemap.png" style="width:100%" 
-				class="w3-hover-opacity" alt="Airline routes, created by D3.js in the context of Coursera course. Some codes are provided by the lecturer"><figcaption class="uk-text-centeruk-text-small">
-				</a>
-					Airline routes</figcaption>		  
-			</div>
+
 
 	</div>
-  	</div>
+		<!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
+	<div class="w3-row-padding w3-center w3-section d3 visible">
+		<div class="w3-col s4 img_container">
+				<a href="/airlineroute.html"><img src="https://ilovedc74.github.io/pic/airlinemap.png" style="width:100%" 
+				class="w3-hover-opacity" alt="Airline routes, created by D3.js in the context of Coursera course. Some codes are provided by the lecturer">
+				<!-- <figcaption class="uk-text-centeruk-text-small">Airline routes</figcaption>		  -->
+				</a>
+		</div>
+
+	</div>
+
 </div>
 
 	
@@ -525,6 +559,103 @@ document.addEventListener("DOMContentLoaded", function(){
         	x.className = x.className.replace(" w3-show", "");
     	}
 	}
+// test
+	// $(document).ready(function(){
+		
+	// 	$('.img_container').addClass("hidden");
+
+	// 	$('.img_container').click(function() {
+	// 		var $this = $(this);
+	// 		if ($this.hasClass("hidden")) {
+	// 			$(this).removeClass("hidden").addClass("visible");
+	// 		} else {
+	// 			$(this).removeClass("visible").addClass("hidden");
+	// 		}
+	// 	});
+	// });
+	$(document).ready(function(){
+		
+		//TODO: click on id=XX button, for inside div>imgcontainer id = XX, add class visible. else add hidden. Press again then reverse action.
+		//TODO: Do this for all 4 categories.
+
+		// $('.img_container').addClass("hidden");
+
+		$("#graphic").click(function() {
+			// var $this = $('.graphic');
+			if ($('.graphic').hasClass("hidden")) {
+				$('.graphic').removeClass("hidden").addClass("visible");
+			} 
+			$('.d3').removeClass("visible").addClass("hidden");
+			$('.ggplot').removeClass("visible").addClass("hidden");
+			$('.projmapping').removeClass("visible").addClass("hidden");
+		})
+		
+		$("#d3").click(function() {
+
+			if ($('.d3').hasClass("hidden")) {
+				$('.d3').removeClass("hidden").addClass("visible");
+			} 
+			$('.graphic').removeClass("visible").addClass("hidden");
+			$('.ggplot').removeClass("visible").addClass("hidden");
+			$('.projmapping').removeClass("visible").addClass("hidden");
+		})
+
+		$("#ggplot").click(function() {
+			// var $this = $('.graphic');
+			if ($('.ggplot').hasClass("hidden")) {
+				$('.ggplot').removeClass("hidden").addClass("visible");
+			} 
+			// else {
+			// 	$('.ggplot').removeClass("visible").addClass("hidden");
+			// }
+			$('.graphic').removeClass("visible").addClass("hidden");
+			$('.d3').removeClass("visible").addClass("hidden");
+			$('.projmapping').removeClass("visible").addClass("hidden");
+		})
+		$("#projmapping").click(function() {
+			$('.projmapping:visible').hide();
+			// Later in the script - Show it but only If it's not visible.  
+			$('.projmapping:hidden').show();
+			// if ($('.projmapping').hasClass("hidden")) {
+			// 	$('.projmapping').removeClass("hidden").addClass("visible");
+			// } else {
+			// 	$('.projmapping').hide();
+			// }
+			$('.graphic').removeClass("visible").addClass("hidden");
+			$('.d3').removeClass("visible").addClass("hidden");
+			$('.ggplot').removeClass("visible").addClass("hidden");
+		})
+		$("#allshow").click(function() {
+			if ($('.projmapping').hasClass("hidden")) {
+				$('.projmapping').removeClass("hidden").addClass("visible");
+			}
+			if ($('.graphic').hasClass("hidden")) {
+				$('.graphic').removeClass("hidden").addClass("visible");
+			}
+			if ($('.d3').hasClass("hidden")) {
+				$('.d3').removeClass("hidden").addClass("visible");
+			}
+			if ($('.ggplot').hasClass("hidden")) {
+				$('.ggplot').removeClass("hidden").addClass("visible");
+			}
+
+		})
+		// 	// 	var $this = $('.graphic');
+		// 	// 	if ($this.hasClass("hidden")) {
+		// 	// 	$(this).removeClass("hidden").addClass("visible");
+		// 	// } else {
+		// 	// 	$(this).removeClass("visible").addClass("hidden");
+		// 	// }
+		// 	});
+		// 	// if ($this.hasClass("hidden")) {
+		// 	// 	$(this).removeClass("hidden").addClass("visible");
+		// 	// } else {
+		// 	// 	$(this).removeClass("visible").addClass("hidden");
+		// 	// }
+
+	})
+
+
 </script>
 
 
