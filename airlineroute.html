@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif
+        }
+        h1 {
+            background-color: #2a5599;
+            color: white;
+            padding: 5px;
+        }
+
+        svg{
+            border: solid 1px black;
+        }
+
+
+        .mainView{
+            display: flex;
+        }
+    </style>
+    <script src="d3.js"></script> 
+
+</head>
+
+<body>
+    <h1>Airlines Routes</h1>
+    <div class="mainView">
+        <div>
+            <h2>Airlines</h2>
+            <svg id="AirlinesChart"></svg>
+        </div>
+        <div>
+            <h2>Airports</h2>
+            <svg id="Map"></svg>
+        </div>
+    </div>
+    <div><p>Airline routes, created in D3.js in the context of online Coursera course: "Information Visualisation:Programming with D3.js. Some codes and all data are provided by the lecturer.</p></div>
+</body>
+    <script src="./main.js"></script>
+
+
+</html>
