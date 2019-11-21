@@ -9,7 +9,7 @@
 
 	<meta property="og:site_name" content="WH">
 	<meta name="twitter:image:alt" content="Accessible of blocked alt text">
-	<meta name="twitter:site" content="@nlldnaes">
+	<meta name="twitter:site" content="@whitneyhungi">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -18,10 +18,13 @@
 	<!-- jQuery library (served from Google) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://ilovedc74.github.io/wh.js/typed.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Baskervville|DM+Serif+Display|Noto+Serif+SC|PT+Serif|Source+Serif+Pro&display=swap" rel="stylesheet">
 
-	<link href="https://ilovedc74.github.io/Lato2OFLWeb/Lato/latofonts.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+		<link href="https://ilovedc74.github.io/Lato2OFLWeb/Lato/latofonts.css" rel="stylesheet" type="text/css">
 	<link href="https://ilovedc74.github.io/Lato2OFLWeb/Lato/latostyle.css" rel="stylesheet" type="text/css">
-
+	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- bxSlider Javascript file -->
 	<script src="https://ilovedc74.github.io/jquery.bxslider/jquery.bxslider.js"></script>
 	<!-- bxSlider CSS file -->
@@ -34,13 +37,31 @@
 	<script type="text/javascript" src="https://ilovedc74.github.io/js/components/lightbox.min.js"></script>
 
 	<style>
-		body,h4,h5,h6 {
-			font-family: "Lato", sans-serif;
+		body{
+			/* font-family: "Lato", sans-serif; */
+			font-family: 'Baskervville', serif;
+			/* font-family: 'DM Serif Display', serif; */
+			/* font-family: 'Noto Serif SC', serif; */
+			/* font-family: 'PT Serif', serif; */
+			/* font-family: 'Source Serif Pro', serif; */
 			font-size: medium;
 		}
+		h4,h5,h6 {
+
+			font-family: 'Libre Baskerville', serif;
+
+			font-size: medium;
+			font-style: oblique;
+			font-size: 13px;
+		}
 		h1,h2,h3 {
-			font-family: "Lato Heavy", sans-serif;
+			/* font-family: "Lato Heavy", sans-serif; */
+			font-family: 'DM Serif Display', serif;
+
 			font-size: large;
+		}
+		p.italic {
+			font-style: italic;
 		}
 
 		body, html {
@@ -68,9 +89,6 @@
 			padding: 0;
 
 		}
-		/* .icon-button{
-
-		} */
 
 		/* Create a Parallax Effect */
 		.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
@@ -108,6 +126,11 @@
 		.w3-hover-opacity {cursor: pointer;}
 		.footerbutton{
 			opacity: 100%;
+		}
+
+		/* delete below if you want to center the contents */
+		.w3-container{
+			margin-left: 5px;
 		}
 		/* Turn off parallax scrolling for tablets and phones */
 		/* @media only screen and (max-device-width: 1600px) {
@@ -149,33 +172,48 @@
 		.visible {
 			display:block;
 		}
-/* 
-		.hidediv>div {
-			display:none;
-		}
-		.showdiv>div {
-			display:block;
-		} */
-
-	
 		html {
 		  scroll-behavior: smooth;
 		}
 		ul {
     		list-style-type: none;
 		}
-		/* li a {
-			float: left;
-			display: inline;
-		} */
 		li {
   			float: left;
 		}
-
 		li a {
 		  display: block;
 		  padding: 8px;
 		}
+		.fa {
+		  padding: 2px;
+		  font-size: 20px;
+		  width: 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  margin: 10px 2px;
+		}
+		.fa-github{
+		  /* background: #000000; */
+		  color: #808080;
+		}
+		.fa-linkedin{
+		  /* background: #000000; */
+		  color: #808080;
+		}
+
+		.fa-envelope{
+		  /* background: #000000; */
+		  color: #808080;
+		}
+		.fa-twitter{
+		  /* background: #000000; */
+		  color: #808080;
+		}
+		.fa:hover {
+		    opacity: 0.7;
+		}
+		.pointer {cursor: pointer;}
 
 
 	</style>
@@ -184,7 +222,7 @@
 <body>
 	<!-- Navbar -->
 	<div class="w3-top">
-		<div class="w3-bar dropdown dropdown-content" id="myNavbar">
+		<div class="w3-bar" id="myNavbar">
           <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" 
             onclick="toggleFunction()" title="Toggle Navigation Menu">
 			<i class="fa fa-bars"></i>
@@ -194,12 +232,19 @@
 		  	<a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
 		  	<a href="#work" class="w3-bar-item w3-button w3-hide-small">VISUAL CONTENTS</a>
 			<a href="#researchproject" class="w3-bar-item w3-button w3-hide-small"> RESEARCH PROJECT</a>
-		  	<a href="#contact" class="w3-bar-item w3-button w3-hide-small">CONTACT</a>
-		  	<a href="https://www.linkedin.com/in/whitneyhung/" target="_blank" class="w3-bar-item w3-button">LINKEDIN</a>
-				<a href="https://github.com/ilovedc74/" target="_blank" class="w3-bar-item w3-button">GITHUB</a>
-			<!-- <a href="https://www.linkedin.com/in/whitneyhung/" target="_blank" class="w3-bar-item w3-button" img src="https://ilovedc74.github.io/pic/In-White-21px-R.png"></a> -->
-		  <!-- <a href="https://github.com/ilovedc74/" target="_blank" class="w3-bar-item w3-button" img src="GitHub-Mark-Light-32px.png">GITHUB</a> -->
-				<a href="https://ilovedc74.github.io/cv/WhitneyHung_CV_.pdf" target="_blank" class="w3-bar-item w3-button">CV</a>
+			<a href="#contact" class="w3-bar-item w3-button w3-hide-small">CONTACT</a>
+			<!-- <div class="contact-info"> -->
+			<a href="https://ilovedc74.github.io/cv/WhitneyHung_CV_.pdf" target="_blank" class="w3-bar-item w3-button">CV</a>
+			<a href="https://github.com/ilovedc74" target="_blank"><i class="fa fa-github"></i></a>
+			<a href="https://www.linkedin.com/whitneyhung" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="mailto:whitneyhung.hello@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://twitter.com/whitneyhungi" target="_blank"><i class="fa fa-twitter  fa-lg"></i></a>
+			
+			<!-- </div > -->
+		  	<!-- <a href="https://www.linkedin.com/in/whitneyhung/" target="_blank" class="w3-bar-item w3-button">LINKEDIN</a>
+				<a href="https://github.com/ilovedc74/" target="_blank" class="w3-bar-item w3-button">GITHUB</a> -->
+
+
 		</ul>
 		</div>
 		<!-- Navbar on small screens -->
@@ -221,8 +266,9 @@
 		<!-- <div id="logo" class="w3-display-middle w3-padding-large w3-xxlarge"> -->
 		<div class="bgimg-1 w3-display-container w3-opacity-min w3-padding-large w3-xxlarge" id="home">
 		  <div class="w3-display-middle" style="white-space:nowrap;">
-			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hej, <span class="element"></span></span>
-			</div>
+			<!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hej, <span class="element"></span></span> -->
+			<span class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hej, <span class="element"></span></span>
+		 </div>
 			<a href="#about">
 				<div class="scroll-down" aria-hidden="true" >
 				</div>
@@ -230,43 +276,48 @@
 		</div>
 	</div>
 	<div class="w3-content w3-container w3-padding-64" id="about">
-	  <h3 class="w3-center">ABOUT</h3>
+	  <!-- <h3 class="w3-center">ABOUT</h3> -->
+	  <h3>ABOUT</h3>
 			
 			<!-- <p class="w3-center"><em>I love creating stuff. </em></p> -->
 		<p>
-				<p class="w3-center"><strong>I am currently searching for opportunities as a research analyst, data journalist in London.</strong></p> 
-		<p><em>Me</em></p>
-			After graduating from B.A. Diplomacy, I took a turn to study cognitive psychology.  
+			<h2><p><em>Me</em></p></h2>
+				<p><strong></strong> 
+				Bred from social science, grew in market research and passionate about psychology, information and technology. I enjoy doing psychological research to understand human behaviours. This entails gathering data, processing data and telling story from the analysis. I am currently challenging myself to create data visualisations with D3.js library. I am searching for opportunities as a researcher / analyst / data journalist in London.</p>
+
+			
+			<!-- After graduating from B.A. Diplomacy, I took a turn to study cognitive psychology.  
 			I currently graduated from <a href=https://www.neuroaestheticsandcreativity.net/ target="_blank">MSc Psychology of the Arts, Neuroaesthetics and Creativity </a>at Goldsmiths University. 
 			I am very interested in visual attention and information processing which I hope to apply to creating data visualisation graphs.
 		Previously trained at Modelling and Informatics Lab (MIL) in Taiwan and have experiences in doing research. The lab led by Dr Tsung-Ren Huang focuses on
-		optimising informatic tools to solve social psychological research questions. 
+		optimising informatic tools to solve social psychological research questions.  -->
 		<br>
-		<p><em>Projects</em></p>
-		At MIL as a research assistant, my research project was about social learning and collaborative memory about a paradigm - <b>"Socially-Shared Retrieval Induced Forgetting."</b>
-		I created an experiement website with <a href=https://www.jspsych.org/ target="_blank">jsPsych</a>, a JavaScript library and PHP to collect behavioural data.  
+		<h2><p><em>Psychological Research Projects</em></p></h2>
+		<h1><span class="w3-padding-large w3-black pointer" id = "proj1">Collaborative learning and Social Memory: Retrieval-Induced Forgetting</span></h1>
+
+		<div class = "proj1 hidden">
+		Psychological research project using the <b>"Socially-Shared Retrieval-Induced Forgetting."</b> paradigm to understand how social learning and practice impacts and magnifies memory performance.
+		I created an experiement website with a JavaScript library <a href=https://www.jspsych.org/ target="_blank">jsPsych</a>, and PHP to collect behavioural data.  
 		I was responsible for data collection, data
-		analysis and assisted in research design. The discovery was how
-		social learning and practice impacts and magnifies memory performance. 
-		 <br>
-		 <br>
-		<b>Tools used: R | Python (Spyder) | Excel | HTML, CSS | JavaScript | PHP <br></b>
+		analysis and assisted in research design.  
+		</div>
+
+		<h3>Tools used: R | Python (Spyder) | Excel | HTML, CSS | JavaScript | PHP <br></b></h3>
 		<br>
 		<hr>
-		My Master's thesis topic is <b> "Caffeine and its Effect on Dynamic Visual Attention." </b> I generated random stimulus list
-		using Python and analysed as well as visualised my data with R.
-		This is the first research measuring caffeine and dynamic visual attention. By measuring covert attention with
-		an eye-tracker and manipulating caffeine intake, I discovered that caffeine accelerates attention orienting while information is being processed. 
-		<br>
-		 <br>
-		<b>Tools used: R | Python (Jupyter Notebook) | Eyelink 1000 (Eye-tracking hardware) <br></b>
+		<h1><span class="w3-padding-large w3-black pointer"  id = "proj2">Caffeine and its Effect on Dynamic Visual Attention</span></h1>
+		<div class = "proj2 hidden">
+		To find out how caffeine would affect human visual attention, I used measured covert attention with
+		an eye-tracker and manipulated caffeine intake. The statistical analysis was done with ANOVA. I generated random stimulus list using Python and analysed my data with R. I discovered that caffeine accelerates attention orienting while information is being processed. 
+		</div>
+		 <h3><b>Tools used: R | Python (Jupyter Notebook) | Eyelink 1000 (Eye-tracking hardware) <br></b></h3>
 		<br>
 		<hr>
 		<!-- I hope to apply cognitive psychology into designing data visualisations for information to be more efficiently processed by audiences.  -->
 		I occasionally use Adobe Illustrator to create graphic designs for activities I'm involved in. 
 		Apart from my professions I enjoy reading and jogging in my free time.</p>
 		
-		<p><em>This Website</em></p>
+		<h3><p><em>This Website</em></p></h3>
 			The generative art background patterns were created with <a href=https://openframeworks.cc/ target="_blank">openFrameworks</a>. 
 			Those projects are realised in the context of the Workshops in Creative Coding module as part of MSc Psychology of the Arts, Neuroaesthetics and Creativity degree. 
 			Assignments, inspirations and parts of the source code provided by Dr Theo Papatheodorou. Except for the brain image which was generated by fMRI, and finalised by Adobe Photoshop.
@@ -284,7 +335,9 @@
 
 	<!-- Container (Portfolio Section) -->
 	<div class="w3-content w3-container w3-padding-64">
-			<p class="w3-center"><em>These are some side projects. </em></p>
+			<!-- <p class="w3-center"><em>These are some side projects. </em></p> -->
+		<h2><p><em>These are some side projects. </em></p></h2>
+			<p>
 			<ul>
 				<li><a id="d3">D3</a>
 				</li> 
@@ -299,6 +352,8 @@
 				<li><a id="allshow">All</a>
 				</li>
 			</ul>
+			
+		</p>
 		<!-- <p class="w3-center">Click to enlarge.</p> -->
 		<!-- <div class ="uk-grid" data-uk-grid-match>
 			<div class="uk-width-1-2" ><a href="https://ilovedc74.github.io/pic/bbplot1.png" data-uk-lightbox title="data source:Book Association"><img src="https://ilovedc74.github.io/pic/bbplot1.png"></a>
@@ -426,7 +481,7 @@
 <!-- Container (RESEARCH PROJECT) -->
 
 <div class="w3-content w3-container w3-padding-64">
-	<a class = "w3-xlarge " id = "resTitle">Retrieval-Induced Forgetting Phenomena: A meta-analysis</a>
+	<h1><a class = "w3-xlarge " id = "resTitle">Retrieval-Induced Forgetting Phenomena: A meta-analysis</a></h1>
 
 		<div id = "textContainer"> <!--hide this part -->
 			<h4>Introduction</h4>
@@ -485,7 +540,7 @@
   </div>
 
 	  <br>
-  	<a class = "w3-xlarge " id = "resTitle">Caffeine and the Effect on Visual Attention in the context of Reading</a>
+  	<h1><a class = "w3-xlarge " id = "resTitle">Caffeine and the Effect on Visual Attention in the context of Reading</a></h1>
 	  <div id = "textContainer"> <!--hide this part -->
 
 			Coming soon.
@@ -505,25 +560,30 @@
 
 <!-- Container (Contact Section) -->
 
-	<div class="w3-row w3-padding-32 w3-section w3-center w3-content" id="contact">
+	<div class="w3-row w3-padding-32 " id="contact">
 
 		<!-- <h4><em>I'd love your feedback!</em></h4> -->
 
 
 		<!--Contact Information-->
-		<div class="w3-col w3-container w3-section w3-center">
+		<div class="w3-col w3-container w3-section">
 			<br>
 			<br>
-			<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 
-			<br>Currently based in London, UK
-			<br> 
+			<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge"></i> 
+Currently based in London<br>
+
 			<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
-				For any inqueries: <a href = "mailto:whitneyhung.hello@gmail.comm">whitneyhung.hello@gmail.com</a>
+				 <a href = "mailto:whitneyhung.hello@gmail.comm">whitneyhung.hello@gmail.com</a><br>
+
+			<!-- <a href="https://twitter.com/whitneyhungi" target="_blank"><i class="fa fa-twitter"><i></a> -->
+
+			<i class="fa fa-twitter fa-fw w3-hover-text-black w3-xlarge "></i>
+				 <a href = "https://twitter.com/whitneyhungi">@whitneyhungi</a><br>
 			<br>
-			<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
-			Follow me on Twitter <a href = "https://twitter.com/whitneyhungi">@whitneyhungi</a>
-			<br>
-			<!-- <p>Swing by for a cup of coffee, or send an email to me</p> -->
+			<!-- <div id="back">
+					<h5 ><a href="#">Top</a></h5>
+					© 2019 Whitney Hung. All Rights Reserved.
+			</div> -->
 		</div>
 
 	</div>
@@ -532,8 +592,8 @@
 	<footer class="w3-center w3-black w3-padding-16 w3-opacity w3-hover-opacity-off">
 		<br>
 
-		<div id="back" class="w3-center">
-		<h5 ><a href="#">Top</a></h5>
+		<!-- <div id="back" class="w3-center"> -->
+		<!-- <h5 ><a href="#">Top</a></h5> -->
 		© 2019 Whitney Hung. All Rights Reserved.
 		</div>
 
@@ -596,6 +656,41 @@ document.addEventListener("DOMContentLoaded", function(){
 		//TODO: Do this for all 4 categories.
 
 		// $('.').addClass("hidden");
+		$( "#proj1" ).click(function(){
+			$( ".proj1" ).toggle( function() {
+				if ($('#textContainer').hasClass("hidden")) {
+					$('#textContainer').removeClass("hidden");
+				}
+  			  // Animation complete.
+  			});
+		});
+
+		$( "#proj2" ).click(function(){
+			$( ".proj2" ).toggle( function() {
+				if ($('#textContainer').hasClass("hidden")) {
+					$('#textContainer').removeClass("hidden");
+				}
+  			  // Animation complete.
+  			});
+		});
+		// $("#proj1").click(function() {
+		// 	// var $this = $('.graphic');
+		// 	if ($('.proj1').hasClass("hidden")) {
+		// 		$('.proj1').removeClass("hidden").addClass("visible");
+		// 	} else {
+		// 		$('.proj1').removeClass("visible").addClass("hidden");
+		// 	}
+
+		// })
+		// $("#proj2").click(function() {
+		// 	// var $this = $('.graphic');
+		// 	if ($('.proj2').hasClass("hidden")) {
+		// 		$('.proj2').removeClass("hidden").addClass("visible");
+		// 	} else {
+		// 		$('.proj2').removeClass("visible").addClass("hidden");
+		// 	}
+
+		// })
 
 		$("#graphic").click(function() {
 			// var $this = $('.graphic');
@@ -626,9 +721,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			if ($('.ggplot').hasClass("hidden")) {
 				$('.ggplot').removeClass("hidden").addClass("visible");
 			} 
-			// else {
-			// 	$('.ggplot').removeClass("visible").addClass("hidden");
-			// }
+
 			$('.graphic').removeClass("visible").addClass("hidden");
 			$('.d3').removeClass("visible").addClass("hidden");
 			$('.projmapping').removeClass("visible").addClass("hidden");
@@ -701,6 +794,7 @@ document.addEventListener("DOMContentLoaded", function(){
   			  // Animation complete.
   			});
 		});
+		
 
 	})
 
