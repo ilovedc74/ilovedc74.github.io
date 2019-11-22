@@ -60,8 +60,44 @@
 
 			font-size: large;
 		}
-		p.italic {
-			font-style: italic;
+		
+		/* a:link {
+		  color:darkkhaki;
+		  text-decoration: none;
+		} */
+
+		/* mouse over link */
+		/* a:hover {
+		  color: hotpink;
+		  text-decoration: none;
+		} */
+		a {
+			outline: none;
+			text-decoration: none;
+			padding: 2px 1px 0;
+		}
+
+		a:link {
+			color: #265301;
+		}
+
+		a:visited {
+			color: #437A16;
+		}
+
+		a:focus {
+			border-bottom: 1px solid;
+			background: #BAE498;
+		}
+
+		a:hover {
+			border-bottom: 1px solid;     
+			background: #CDFEAA;
+		}
+
+		a:active {
+			background: #265301;
+			color: #CDFEAA;
 		}
 
 		body, html {
@@ -214,6 +250,13 @@
 		    opacity: 0.7;
 		}
 		.pointer {cursor: pointer;}
+
+
+		/* selected link */
+		/* a:active {
+		  color: blue;
+		  text-decoration: none;
+		} */
 
 
 	</style>
@@ -481,72 +524,73 @@
 <!-- Container (RESEARCH PROJECT) -->
 
 <div class="w3-content w3-container w3-padding-64">
+	<h4><em>Click to expand</em></h4>
 	<h1><a class = "w3-xlarge " id = "resTitle">Retrieval-Induced Forgetting Phenomena: A meta-analysis</a></h1>
-
 		<div id = "textContainer"> <!--hide this part -->
-			<h4>Introduction</h4>
-				<p>“Within-individual Retrieval-induced Forgetting” (WI-RIF) refers to the phenomenon that an individual’s selective retrieval of items (Rp+) often causes more forgetting of categorically related and yet unrehearsed items (Rp-) than categorically unrelated and unrehearsed items (Nrp).
+			
+			<h2><a span id = "intro">Introduction</span></a></h2>
+				<div class="w3-row intro hidden">
+					<p>“Within-individual Retrieval-induced Forgetting” (WI-RIF) refers to the phenomenon that an individual’s selective retrieval of items (Rp+) often causes more forgetting of categorically related and yet unrehearsed items (Rp-) than categorically unrelated and unrehearsed items (Nrp).
 						WI-RIF has been also reported in social settings as “Socially-shared Retrieval-induced Forgetting” (SS-RIF). For example, when a group of people mention parts of their shared experience in conversations, both speakers and listeners suffer from forgetting of related and yet unmentioned memory.
-				</p>
-				<p>We conducted meta-regression on 59 studies.</p>
-			<div class="w3-row">
-				<figure class="w3-col m6 w3-padding-large">
-							<img src="https://ilovedc74.github.io/pic/Rplot_ep.png" style="width:100%" onclick="onClick	(this)" class="w3-hover-opacity" alt="Meta-regression.">
-						<figcaption class="uk-text-center uk-text-small">Meta-regression</figcaption>
-				</figure>
-				<div class="w3-col m6 w3-padding-large text-left">
-					<p>
-					<p>Overall results show that Practice Effect is negatively correlated to the Suppression Effect when the 
-							practice session were free conversations (blue dots). </p>
-					<p><b>Memorability Bias</b>: The more memorable the material, the more likely it is to be mentioned in a conversation 
-							and to be subsequently remembered (Cue et al., 2007).</p>
-					<p>Therefore, we are interested to test Memorability Bias under both free conversation and non-free 
-							conversation practice sessions. </p>
-					<p>Our hypothesis is the large effect size of Socially-Shared Retrieval-Induced Frogetting under free-conversations and the negative correlation found in meta-analysis is due to the effect of 
-							Memorability Bias.</p>
-					<p>We further test this hypothesis by conducting experiments.</p>
 					</p>
+					<p>We conducted meta-regression on 59 studies.</p>
 				</div>
-			</div>
-			<br>
-			<br>
-		<div>
-			<h3>The Underlying Mechanism of Socially-Shared Retireival-Induced Forgetting</h3>
-				<p>
+			<h2><a span id = "meta">Meta-Analysis</span></a></h2>
+				<div class="w3-row meta hidden">
+					<figure class="w3-col m6 w3-padding-large">
+						<img src="https://ilovedc74.github.io/pic/Rplot_ep.png" style="width:100%" onclick="onClick	(this)" class="w3-hover-opacity" alt="Meta-regression.">
+						<figcaption class="uk-text-center uk-text-small">Meta-regression</figcaption>
+					</figure>
+					<div class="w3-col m6 w3-padding-large text-left">
+						<p>
+						<p>Overall results show that Practice Effect is negatively correlated to the Suppression Effect when the 
+							practice session were free conversations (blue dots). </p>
+						<p style="font-style: italic;"><b>Memorability Bias</b>: The more memorable the material, the 	more likely it is to be mentioned in a conversation 
+								and to be subsequently remembered (Cue et al., 2007).</p>
+						<p>Therefore, we are interested to test Memorability Bias under both free conversation and 	non-free 
+								conversation practice sessions. </p>
+						<p>Our hypothesis is the large effect size of Socially-Shared Retrieval-Induced Frogetting under 	free-conversations and the negative correlation found in meta-analysis is due to the effect of 
+								Memorability Bias.</p>
+						<p>We further test this hypothesis by conducting experiments.</p>
+						</p>
+					</div>
+				</div>
+
+
+			<h2><a span id = "mech" >The Underlying Mechanism of Socially-Shared Retireival-Induced Forgetting</span></a></h2>
+				<div class = "mech hidden">
+
 					<p>Conducting experiment on a young group of people aged between 20~35, 
 					and an older group aged above 60. The results as following aligned to the meta-analysis.</p>
 					<p>The figure below shows that the more memorable the item, the more likely it is to be recalled during practice, 
 						becoming a Rp+ items, whereas the less memorable items are less recalled during practice. Therefore, 
 						becomes Rp- items more often. So apart from the RIF effect, the Memorability Bias is having an affect on the large effect size.
+						
 					</p>
+					
+				</div>
+					<!-- <p class="w3-center"><em>Swipe right to see older people's results.</em></p> -->
 
-				</p>
-				<p class="w3-center"><em>Swipe right to see older people's results.</em></p>
-        	<div class="slider">
-        	  	<div><img src="https://ilovedc74.github.io/pic/memorability_young.png" width = "950" height = "525" title="Memorability of younger people, 20<age<35"></div>
-        	  	<div><img src="https://ilovedc74.github.io/pic/memorability_old.png" width = "950" height = "525" title="Memorability of older people, age<60"></div>
-				<div><img src="https://ilovedc74.github.io/pic/recall_rates.png" width = "950" height = "525" title="Memory Recall Rates"></div>
-			</div>
-		</div>
+					<div><p><em>Swipe right to see older people's results.</em></p></div>
+					<div class="slider">
+        	  			<div><img src="https://ilovedc74.github.io/pic/memorability_young.png" width = "950" height = "525" title="Memorability of younger people, 20<age<35"></div>
+        	  			<div><img src="https://ilovedc74.github.io/pic/memorability_old.png" width = "950" height = "525" 		title="Memorability of older people, age<60"></div>
+						<div><img src="https://ilovedc74.github.io/pic/recall_rates.png" width = "950" height = "525" 		title="Memory Recall Rates"></div>
+					</div>
+		
 			<p><h4>References</h4>
 				<ul style="list-style-type: none" class="w3-ul text-left">
 					<li>1. Anderson, M. C., Bjork, R. A., & Bjork, E. L. (1994). Remembering can cause forgetting: Retrieval dynamics in long-term memory. Journal of Experimental Psychology: Learning, Memory, and Cognition, 20, 1063-1087.</li>
 					<li>2. Murayama, K., Miyatsu, T., Buchli, D., & Storm, B. C. (2014). Forgetting as a consequence of retrieval: A meta-analytic review of retrieval-induced forgetting. Psychological Bulletin, 140, 1383–1409. <br></li>	
 					<li>3. Stone, C. B., Barnier, A. J., Sutton, J., & Hirst, W. (2010). Building consensus about the past: Schema consistency and convergence in socially shared retrieval-induced forgetting. Memory, 18, 170-184.<br> </li>	
-			</ul>
-		</p>
+				</ul>
+			</p>
+  		</div>
 
-	<br>
-  </div>
-
-	  <br>
   	<h1><a class = "w3-xlarge " id = "resTitle">Caffeine and the Effect on Visual Attention in the context of Reading</a></h1>
-	  <div id = "textContainer"> <!--hide this part -->
-
+	  	<div id = "textContainer"> <!--hide this part -->
 			Coming soon.
-
-	  </div>
-
+	  	</div>
 </div>
 
 
@@ -660,6 +704,30 @@ document.addEventListener("DOMContentLoaded", function(){
 			$( ".proj1" ).toggle( function() {
 				if ($('#textContainer').hasClass("hidden")) {
 					$('#textContainer').removeClass("hidden");
+				}
+  			  // Animation complete.
+  			});
+		});
+		$( "#intro" ).click(function(){
+			$( ".intro" ).toggle( function() {
+				if ($('.intro').hasClass("hidden")) {
+					$('.intro').removeClass("hidden");
+				}
+  			  // Animation complete.
+  			});
+		});
+		$( "#meta" ).click(function(){
+			$( ".meta" ).toggle( function() {
+				if ($('.meta').hasClass("hidden")) {
+					$('.meta').removeClass("hidden");
+				}
+  			  // Animation complete.
+  			});
+		});
+		$( "#mech" ).click(function(){
+			$( ".mech" ).toggle( function() {
+				if ($('.mech').hasClass("hidden")) {
+					$('.mech').removeClass("hidden");
 				}
   			  // Animation complete.
   			});
