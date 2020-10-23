@@ -1,7 +1,7 @@
 let store = {} 
 function loadData() {
     return Promise.all([
-        d3.csv("routes.csv"),
+        d3.csv("https://gist.githubusercontent.com/ilovedc74/2c5e100304104ca6af2ef1108ab4153c/raw/routes.csv"),
         d3.json("countries.geo.json"),
     ]).then(datasets => {
         store.routes = datasets[0];
